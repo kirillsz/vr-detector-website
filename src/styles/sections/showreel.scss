@@ -1,0 +1,37 @@
+.showreel {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1920px;
+  & .card {
+    backdrop-filter: blur(40px);
+    min-height: 204px;
+    @include mdMinBreakPoint {
+      padding: 1.5rem;
+      height: clamp(180px, 14.5vw, 280px);
+    }
+  }
+
+  &-img {
+    @include mdMinBreakPoint {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  &-options {
+    row-gap: 1rem;
+    margin-left: var(--page-container-padding-x);
+    margin-right: var(--page-container-padding-x);
+    @include mdMaxBreakPoint {
+      transform: translateY(-2.5rem);
+    }
+
+    @include mdMinBreakPoint {
+      row-gap: 1.5rem;
+      padding: 3rem 0;
+      width: clamp(550px, 36vw, 690px);
+    }
+  }
+}

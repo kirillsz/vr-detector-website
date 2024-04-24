@@ -1,0 +1,23 @@
+.sponsorship {
+  margin: 0 auto;
+  @include customMinBreakPoint(45em) {
+    width: clamp(328px, 65%, 1226px);
+  }
+  .link {
+    max-width: 768px;
+    margin: 0 auto;
+    min-height: 192px;
+  }
+  &__logo {
+    margin-bottom: 2rem;
+    @include customMinBreakPoint(45em) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__info {
+    margin-bottom: 2.5rem;
+    @include customMinBreakPoint(45em) {
+      margin-bottom: 4rem;
+    }
+  }
+}

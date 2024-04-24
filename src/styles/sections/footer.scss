@@ -1,0 +1,17 @@
+.footer {
+  padding-bottom: 1.5rem;
+  & hr {
+    margin-bottom: 1.5rem;
+  }
+  &__content {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mdMinBreakPoint {
+      height: auto;
+      flex-direction: row;
+    }
+  }
+}

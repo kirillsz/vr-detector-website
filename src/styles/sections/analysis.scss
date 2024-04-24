@@ -1,0 +1,104 @@
+.analysis {
+  & .card {
+    padding: 1.5rem 1rem;
+
+    @include mdMinBreakPoint {
+      padding: 2.5rem 1.5rem;
+    }
+    &__head {
+      @include mdMaxBreakPoint {
+        margin-bottom: 48px;
+      }
+    }
+    &__description {
+      &__heading {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &__header {
+    margin: {
+      left: var(--page-container-padding-x);
+      right: var(--page-container-padding-x);
+      bottom: clamp(32px, 3.5vw, 64px);
+    }
+
+    @include lgMinBreakPoint {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: clamp(328px, 65%, 1184px);
+    }
+  }
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--page-container-padding-x);
+    scrollbar-width: none;
+    &:hover {
+      cursor: grab;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    @include mdMinBreakPoint {
+      flex-direction: row;
+      column-gap: 24px;
+      overflow: auto;
+    }
+
+    & > * {
+      & {
+        user-select: none;
+        pointer-events: none;
+      }
+
+      &:not(:last-of-type) {
+        @include mdMaxBreakPoint {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#eye-track {
+  @include mdMinBreakPoint {
+    flex: 0 0 560px;
+  }
+  .card {
+    &__head {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+
+      padding: clamp(32px, 9vw, 78px);
+    }
+  }
+}
+#timer {
+  max-height: 358px;
+  .card {
+    &__head {
+      font-size: 102px;
+      @include lgMinBreakPoint {
+        padding-right: 70px;
+        font-size: clamp(124px, 9.5vw, 160px);
+      }
+      line-height: 1;
+    }
+  }
+}
+#progress {
+  @include mdMinBreakPoint {
+    flex: 0 0 819px;
+  }
+}
+#extensions {
+  padding-top: 0;
+  @include mdMinBreakPoint {
+    flex: 0 0 827px;
+  }
+}

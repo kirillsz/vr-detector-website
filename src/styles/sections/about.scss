@@ -1,0 +1,10 @@
+.about {
+  &__description {
+    --min-text-width: 100%;
+    width: clamp(328px, var(--min-text-width), 1074px);
+    @include customMinBreakPoint(35em) {
+      --min-text-width: 60%;
+      margin: 0 auto;
+    }
+  }
+}

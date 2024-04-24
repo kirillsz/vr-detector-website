@@ -1,0 +1,50 @@
+.consumers {
+  font-size: 16px;
+  @include xlMinBreakPoint {
+    font-size: 24px;
+  }
+  position: relative;
+  & .card {
+    height: clamp(204px, 13vw, 236px);
+    padding: 1em;
+  }
+  &-header {
+    margin-bottom: 40px;
+    @include xlMinBreakPoint {
+      text-align: center;
+      width: clamp(328px, 65%, 1184px);
+      margin: 0 auto clamp(96px, 9vw, 186px);
+    }
+  }
+  &-advantages {
+    --items-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--items-gap);
+    @include xlMinBreakPoint {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__column {
+      row-gap: var(--items-gap);
+      @include xlMinBreakPoint {
+        justify-content: space-between;
+        width: 33%;
+        padding-bottom: clamp(16px, 10vw, 106px);
+      }
+    }
+    &__img {
+      @include xlMaxBreakPoint {
+        margin: 0 auto;
+      }
+      transform: translateY(4px);
+      @include xlMinBreakPoint {
+        position: absolute;
+        left: 48%;
+        bottom: 0;
+        translate: (-50%);
+        width: clamp(360px, 36vw, 754px);
+      }
+    }
+  }
+}

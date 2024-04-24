@@ -1,0 +1,19 @@
+@import "the-new-css-reset/css/reset.css";
+/* Mixins */
+@import "./utils/mixins.scss";
+/* Base */
+@import "./base/global.scss";
+@import "./base/animations.scss"; /* Sections  */
+@import "./sections/entry.scss";
+@import "./sections/about.scss";
+@import "./sections/showreel.scss";
+@import "./sections/levels.scss";
+@import "./sections/analysis.scss";
+@import "./sections/sponsorship.scss";
+@import "./sections/consumers.scss";
+@import "./sections/application.scss";
+@import "./sections/footer.scss";
+
+/* Utils */
+@import "./utils/components.scss";
+@import "./utils/utilityClasses.scss";

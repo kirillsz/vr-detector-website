@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/style.scss" />
+    <title>Vr</title>
+  </head>
+  <body>
+    <main class="page-main">
+      <section class="entry | margin-section">
+        <div class="page-container | flex">
+          <div class="entry__description">
+            <div class="entry__description__static">
+              <h1 class="font-size-heading-primary">VR-детектор эмоций</h1>
+              <p>
+                Научитесь
+                <span class="text-accent">понимать себя</span>
+                с помощью виртуальной реальности
+              </p>
+            </div>
+            <div class="entry__description__interactive">
+              <a
+                href="#application__form"
+                aria-label="Прокрутка до формы обратной связи"
+              >
+                <div class="link border-radius-l">
+                  <span class="font-size-heading-primary font-weight-semibold"
+                    >Оставить заявку</span
+                  >
+                  <span class="icon__arrow"
+                    ><svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z"
+                        fill="#E6E6E6"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="entry__graphics">
+            <img
+              class="border-radius-l"
+              src="/src/assets/images/entry-img.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="about | margin-section">
+        <div class="page-container">
+          <article class="about__description | font-size-text-about">
+            <p>
+              Погрузитесь в виртуальный мир, который заставит испытать
+              <span class="text-accent">
+                страх, интерес, гнев, удовольствие, отвращение</span
+              >
+              или
+              <span class="text-accent">удивление</span>. Так вы научитесь
+              проживать эмоции безопасно для себя и окружающих.
+            </p>
+            <br />
+            <p>
+              Получите комментарии психолога по каждой эмоции: поймёте
+              что именно вы испытываете и научитесь с этим справляться.
+              Реалистичное окружение и отзывчивые объекты максимально приблизят
+              вас к реальной ситуации
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="showreel margin-section">
+        <div class="showreel-img">
+          <img src="/src/assets/images/showreel-bg.png" alt="" />
+        </div>
+        <div class="showreel-options flex flex-column">
+          <div class="card border-radius-l flex flex-column flex-between">
+            <div class="card__head">
+              <span class="font-size-text-about font-family-accent"
+                >Анализ поведения</span
+              >
+            </div>
+            <div
+              class="card__description font-size-heading-primary text-color-secondary"
+            >
+              Приложение измеряет и фиксирует особенности вашего поведения.
+              Следите за своим прогрессом или обсудите результаты с психологом
+            </div>
+          </div>
+          <div class="card border-radius-l flex flex-column flex-between">
+            <div class="card__head">
+              <span class="font-size-text-about font-family-accent"
+                >Проживание эмоции</span
+              >
+            </div>
+            <div
+              class="card__description font-size-heading-primary text-color-secondary"
+            >
+              Попробуйте пройти через накалённые эмоциональные ситуации
+            </div>
+          </div>
+          <div class="card border-radius-l flex flex-column flex-between">
+            <div class="card__head">
+              <span class="font-size-text-about font-family-accent"
+                >Рекомендации психолога</span
+              >
+            </div>
+            <div
+              class="card__description font-size-heading-primary text-color-secondary"
+            >
+              Познакомитесь с каждой эмоцией и узнаете как справляться с ними
+              справляться
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="levels | margin-section">
+        <div class="page-container flex">
+          <aside class="levels__static">
+            <header class="levels__heading | flex flex-column">
+              <h1 class="margin-heading font-size-heading-primary">Уровни</h1>
+              <p class="font-size-text-about font-weight-semibold">
+                Приложение состоит из набора ситуация, связанных с
+                <span class="text-accent">конкретной эмоцией</span>. Коллекция
+                расширяется
+              </p>
+            </header>
+            <ul class="levels__select"></ul>
+          </aside>
+          <div class="levels__display"></div>
+        </div>
+      </section>
+
+      <section class="analysis margin-section">
+        <header class="analysis__header">
+          <h1 class="margin-heading font-size-heading-primary">
+            Анализ поведения
+          </h1>
+          <p class="font-size-text-about font-weight-semibold">
+            Приложение <span class="text-accent">собирает данные</span> о
+            поведении <br />
+            пользователя и визуализирует для удобного анализа
+          </p>
+        </header>
+        <main class="analysis__slider">
+          <article
+            class="card flex flex-column flex-between bg-color-light border-radius-l"
+            id="timer"
+          >
+            <div class="card__head">
+              <span class="font-weight-semibold">01:26</span>
+            </div>
+            <div class="card__description">
+              <h2 class="card__description__heading font-size-heading-primary">
+                Таймер
+              </h2>
+              <p class="font-size-heading-primary text-color-secondary">
+                Фиксирует время прохождения
+              </p>
+            </div>
+          </article>
+          <article
+            class="card flex flex-column flex-between border-radius-l"
+            id="eye-track"
+          >
+            <div class="card__head">
+              <img src="/src/assets/images/analysis-eyeTrack.svg" alt="" />
+            </div>
+            <div class="card__description">
+              <h2 class="card__description__heading font-size-heading-primary">
+                Датчик взгляда
+              </h2>
+              <p class="font-size-heading-primary text-color-secondary">
+                Считывает куда вы смотрите и выделяет наиболее интересные
+                вам категории объектов
+              </p>
+            </div>
+          </article>
+          <article
+            class="card flex flex-column flex-between border-radius-l"
+            id="progress"
+          >
+            <div class="card__head">
+              <img src="/src/assets/images/Graph_icon-min.svg" alt="" />
+            </div>
+            <div class="card__description">
+              <h2 class="card__description__heading font-size-heading-primary">
+                Счётчик прогресса
+              </h2>
+              <p class="font-size-heading-primary text-color-secondary">
+                В некоторых уровнях предлагается выполнить небольшое задание.
+                Счётчик прогресса показывает как быстро человек проходил
+                уровень, какие этапы вызвали трудности
+              </p>
+            </div>
+          </article>
+          <article
+            class="card flex flex-column flex-between border-radius-l bg-color-light"
+            id="extensions"
+          >
+            <div class="card__head">
+              <img src="/src/assets/images/analysis-extensions.webp" alt="" />
+            </div>
+            <div class="card__description">
+              <h2 class="card__description__heading font-size-heading-primary">
+                Расширение
+              </h2>
+              <p class="font-size-heading-primary text-color-secondary">
+                Приложение позволяет добавлять новые модули для считывания
+                других показателей. Например, сейчас в разработке интеграция
+                фитнес-браслета для считывания пульса. Можем разработать модули
+                под индивидуальный заказ
+              </p>
+            </div>
+          </article>
+        </main>
+      </section>
+
+      <section class="sponsorship margin-section text-align-center">
+        <div class="page-container">
+          <div class="sponsorship__logo">
+            <img src="/src/assets/images/sponsorship-logo.png" alt="" />
+          </div>
+          <p
+            class="sponsorship__info font-size-heading-primary text-color-secondary"
+          >
+            Проект «модульное VR-приложение „VR-детектор эмоций“» разработан при
+            поддержке ФГБУ «фонд содействия развитию малых форм предприятий в
+            научно-технической сфере» (Фонд содействия инновациям) и
+            федерального проекта «Платформа университетского технологического
+            предпринимательства» в рамках реализации грантового конкурса
+            «Студенческий стартап (II очередь)».
+          </p>
+          <a
+            href="https://fasie.ru/"
+            class="link border-radius-l"
+            aria-label="Узнать больше про Фонд содействия инновациям"
+          >
+            <span class="font-size-heading-primary font-weight-semibold"
+              >Поддержка ФГБОУ «Фонд содействия развитию малых форм предприятий
+              в научно- технической сфере» (Фонд содействия инновациям)</span
+            >
+            <span class="icon__arrow"
+              ><svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z"
+                  fill="#E6E6E6"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="consumers">
+        <div class="page-container">
+          <header class="consumers-header">
+            <h1 class="margin-heading font-size-heading-primary">Для кого</h1>
+            <p class="font-size-text-about font-weight-semibold">
+              VR – детектор эмоций будет полезен как <span class="text-accent"
+                >обычному пользователю</span
+              >, так и <span class="text-accent">профессионалу</span>
+            </p>
+          </header>
+          <main class="consumers-advantages">
+            <div class="consumers-advantages__column flex flex-column">
+              <div class="card border-radius-l flex flex-column flex-between">
+                <div class="card__head">
+                  <span class="font-size-text-about font-family-accent"
+                    >Развлечение</span
+                  >
+                </div>
+                <div
+                  class="card__description font-size-heading-primary text-color-secondary"
+                >
+                  Для тех, кому интересно испытать себя в различных
+                  эмоциональных ситуациях
+                </div>
+              </div>
+              <div class="card border-radius-l flex flex-column flex-between">
+                <div class="card__head">
+                  <span class="font-size-text-about font-family-accent"
+                    >Самоконтроль</span
+                  >
+                </div>
+                <div
+                  class="card__description font-size-heading-primary text-color-secondary"
+                >
+                  Для тех, кто хочет понимать свои эмоции и уметь
+                  их контролировать
+                </div>
+              </div>
+            </div>
+            <div class="consumers-advantages__column flex flex-column">
+              <div class="card border-radius-l flex flex-column flex-between">
+                <div class="card__head">
+                  <span class="font-size-text-about font-family-accent"
+                    >Анализ поведения</span
+                  >
+                </div>
+                <div
+                  class="card__description font-size-heading-primary text-color-secondary"
+                >
+                  Для психологов и HR, которые хотят анализировать поведение
+                  человека в эмоциональных состояниях
+                </div>
+              </div>
+              <div
+                class="card border-radius-l flex flex-column flex-between bg-color-light"
+              >
+                <div class="card__head">
+                  <span class="font-size-text-about font-family-accent"
+                    >Особые условия</span
+                  >
+                </div>
+                <div
+                  class="card__description font-size-heading-primary text-color-secondary"
+                >
+                  Для профессионалов, которым интересно проанализировать
+                  поведение человека в особой ситуации, разработанной на заказ
+                </div>
+              </div>
+            </div>
+            <div class="consumers-advantages__img">
+              <img src="/src/assets/images/consumers-img.webp" alt="" />
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section class="application">
+        <div
+          class="page-container flex flex-column flex-between bg-color-accent-700 border-radius-l"
+        >
+          <span class="application__header font-family-accent"
+            >Оставьте заявку на тестирование</span
+          >
+          <div id="application__form__wrapper">
+            <form method="POST" id="application__form">
+              <input
+                type="email"
+                name="email"
+                class="application__input border-radius-l"
+                id="application__email"
+                placeholder="IvanIvanov@gmail.com"
+              />
+              <button
+                class="application__button border-radius-l text-align-center"
+                type="submit"
+                disabled
+              >
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="page-container">
+        <hr />
+        <div class="footer__content font-size-heading-primary">
+          <h1 class="font-weight-semibold">
+            VR – Детекор <br />
+            Эмоций
+          </h1>
+          <span class="text-color-secondary">© VR – детекор эмоций, 2024</span>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
