@@ -4,9 +4,12 @@
     width: clamp(328px, 65%, 1226px);
   }
   .link {
-    max-width: 768px;
     margin: 0 auto;
-    min-height: 192px;
+    height: 192px;
+    @include lgMinBreakPoint {
+      width: clamp(660px, 41.5vw, 768px);
+      height: clamp(125px, 9.5vw, 167px);
+    }
   }
   &__logo {
     margin-bottom: 2rem;

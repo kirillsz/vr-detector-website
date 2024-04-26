@@ -33,7 +33,7 @@
   &__slider {
     display: flex;
     flex-direction: column;
-    padding: 0 var(--page-container-padding-x);
+    padding: calc(var(--page-container-padding-x) / 2);
     scrollbar-width: none;
     &:hover {
       cursor: grab;
@@ -45,7 +45,7 @@
     @include mdMinBreakPoint {
       flex-direction: row;
       column-gap: 24px;
-      overflow: auto;
+      overflow-x: auto;
     }
 
     & > * {

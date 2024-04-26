@@ -1,18 +1,18 @@
 window.addEventListener("DOMContentLoaded", function () {
   const levelsData = [
     {
+      name: "Великое искусство",
+      description:
+        "Познакомьтесь с величайшими произведениями искусства в виртуальном музее. Все работы в реальном размере",
+      tags: ["Интерес"],
+      img: "interest",
+    },
+    {
       name: "Прогулка над пропастью",
       description:
         "Испытайте на себе страх высоты. Пройдитесь по тонкой перекладине между двумя высотками. На этом уровне отслеживается направление взгляда и динамика прохождения.",
       tags: ["Страх", "Аналитика"],
       img: "fear",
-    },
-    {
-      name: "Грязная пища",
-      description:
-        "Попробуйте пообедать в грязном подвале, наполненном ржавчиной, плесенью и мерзкими насекомыми",
-      tags: ["Отвращение"],
-      img: "disgaust",
     },
     {
       name: "Разрушаемая комната",
@@ -21,26 +21,28 @@ window.addEventListener("DOMContentLoaded", function () {
       tags: ["Гнев"],
       img: "anger",
     },
-    {
-      name: "Великое искусство",
-      description:
-        "Познакомьтесь с величайшими произведениями искусства в виртуальном музее. Все работы в реальном размере",
-      tags: ["Интерес"],
-      img: "interest",
-    },
-    {
-      name: "Счастливые воспоминания",
-      description:
-        "Послушайте вдохновляющие истории и приятные воспоминания, от которых на душе становиться тепло",
-      tags: ["Удовольствие"],
-      img: "pleasure",
-    },
+
     {
       name: "Таинственная комната",
       description:
         "На первый взгляд, обычная комната, но в ней есть чему удивиться.",
       tags: ["Удивление"],
       img: "surpeise",
+    },
+    {
+      name: "Грязная пища",
+      description:
+        "Попробуйте пообедать в грязном подвале, наполненном ржавчиной, плесенью и мерзкими насекомыми",
+      tags: ["Отвращение"],
+      img: "disgaust",
+    },
+
+    {
+      name: "Счастливые воспоминания",
+      description:
+        "Послушайте вдохновляющие истории и приятные воспоминания, от которых на душе становиться тепло",
+      tags: ["Удовольствие"],
+      img: "pleasure",
     },
   ];
   const levelsList = document.querySelector(".levels__select");
@@ -68,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function renderDynamicContent(levelIndex) {
       const level = levelsData[levelIndex];
 
-      levelsDisplay.innerHTML = `<article class="levels__display__article"> 
+      levelsDisplay.innerHTML = `<article class="levels__display__article">
       <div class="levels__display__graphics"><img class="border-radius-l" src='/src/assets/images/level-${level.img}.webp'/></div>
       <div class="levels__display__about">
         <div class="levels__display__headline"><span class="heading font-size-heading-primary font-weight-semibold">${level.name}</span></div>
@@ -108,8 +110,8 @@ window.addEventListener("DOMContentLoaded", function () {
   const levelListItem = [...levelsList.childNodes].filter(
     (child) => child.nodeType !== 3
   );
-  const initialSelectedLevel = levelListItem[0]; // Initial selected level
-  handleLevelSelect(initialSelectedLevel); // Select level with index 0 by default
+  const [initLevel] = levelListItem; // Initial selected level
+  handleLevelSelect(initLevel); // Select level with index 0 by default
   levelListItem.map((child) =>
     child.addEventListener("click", () => handleLevelSelect(child))
   );

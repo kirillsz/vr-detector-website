@@ -40,14 +40,17 @@
     border: $tag-border;
     background-color: $tab-bg-default;
   }
-  &__heading,
-  &__display,
-  &__select {
-    padding: {
-      left: var(--page-container-padding-x);
-      right: var(--page-container-padding-x);
+  @include xlMaxBreakPoint {
+    &__heading,
+    &__display,
+    &__select {
+      padding: {
+        left: var(--page-container-padding-x);
+        right: var(--page-container-padding-x);
+      }
     }
   }
+
   &__static {
     @include xlMinBreakPoint {
       flex-basis: 768px;
@@ -114,7 +117,7 @@
     &__article {
       opacity: 0;
 
-      animation: fadeOut 1s ease 0.2s forwards;
+      animation: fadeOut 1s ease 0.3s forwards;
     }
     & .tag {
       border: 1px #e6e6e6 solid !important;

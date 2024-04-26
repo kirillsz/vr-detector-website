@@ -40,7 +40,7 @@
       transform: translateY(4px);
       @include xlMinBreakPoint {
         position: absolute;
-        left: 48%;
+        left: 49%;
         bottom: 0;
         translate: (-50%);
         width: clamp(360px, 36vw, 754px);

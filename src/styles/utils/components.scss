@@ -28,6 +28,9 @@
   border: 2px solid var(--color-light);
   display: flex;
   align-items: end;
+  &__text {
+    max-width: 95%;
+  }
 
   & .icon__arrow {
     position: absolute;
