@@ -71,7 +71,7 @@ window.addEventListener("DOMContentLoaded", function () {
       const level = levelsData[levelIndex];
 
       levelsDisplay.innerHTML = `<article class="levels__display__article">
-      <div class="levels__display__graphics"><img class="border-radius-l" src='/src/assets/images/level-${level.img}.webp'/></div>
+      <div class="levels__display__graphics"><img class="border-radius-l" src='/images/level-${level.img}.webp'/></div>
       <div class="levels__display__about">
         <div class="levels__display__headline"><span class="heading font-size-heading-primary font-weight-semibold">${level.name}</span></div>
         <p class="levels__display__description font-size-heading-primary text-color-secondary">${level.description}</p>
